@@ -37,5 +37,14 @@ public class TimerBlocks : MonoBehaviour
             //Destroy(trap);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            IsCounting = true;
+            //Destroy(trap);
+        }
+    }
 }
 //coroutine

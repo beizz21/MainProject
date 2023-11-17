@@ -59,7 +59,7 @@ public class Player : MonoBehaviour
             SceneManager.LoadScene(0);
         }
 
-        if (collision.gameObject.CompareTag ("Ground"))
+        if (collision.gameObject.CompareTag ("Ground") || collision.gameObject.CompareTag ("RedBlock"))
         {
             isJumping = false;
         }

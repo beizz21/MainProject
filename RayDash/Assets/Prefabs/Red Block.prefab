@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 6399868489983036309}
   - component: {fileID: 4981467412211743151}
   - component: {fileID: 1308324653177205181}
-  - component: {fileID: 7674848092477670078}
-  - component: {fileID: 5666077235725491722}
   - component: {fileID: 4873810562893504521}
+  - component: {fileID: -2966211435737333257}
+  - component: {fileID: 4142926837840412238}
   m_Layer: 0
   m_Name: Red Block
   m_TagString: RedBlock
@@ -395,8 +395,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!19719996 &7674848092477670078
-TilemapCollider2D:
+--- !u!114 &4873810562893504521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8556091662100472174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba66bd615d107ba49a9710e1fc672a6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trap: {fileID: 8556091662100472174}
+  timer: 2
+--- !u!61 &-2966211435737333257
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -426,12 +440,21 @@ TilemapCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0
-  m_UseDelaunayMesh: 0
---- !u!66 &5666077235725491722
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!66 &4142926837840412238
 CompositeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -460,129 +483,17 @@ CompositeCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 7674848092477670078}
-    m_ColliderPaths:
-    - - X: 2020625024
-        Y: 520624992
-      - X: 2009374976
-        Y: 520624992
-      - X: 2009374976
-        Y: 509375008
-      - X: 2020625024
-        Y: 509375008
-    - - X: 2030625024
-        Y: 480624992
-      - X: 2019374976
-        Y: 480624992
-      - X: 2019374976
-        Y: 469375008
-      - X: 2030625024
-        Y: 469375008
-    - - X: 2060625024
-        Y: 450624992
-      - X: 2009374976
-        Y: 450624992
-      - X: 2009374976
-        Y: 439375008
-      - X: 2060625024
-        Y: 439375008
-    - - X: 1950625024
-        Y: 420624992
-      - X: 1939374976
-        Y: 420624992
-      - X: 1939374976
-        Y: 409375008
-      - X: 1950625024
-        Y: 409375008
-    - - X: 2130625024
-        Y: 410624992
-      - X: 2099374976
-        Y: 410624992
-      - X: 2099374976
-        Y: 399375008
-      - X: 2130625024
-        Y: 399375008
-    - - X: 2080625024
-        Y: 410624992
-      - X: 1999374976
-        Y: 410624992
-      - X: 1999374976
-        Y: 399375008
-      - X: 2080625024
-        Y: 399375008
-    - - X: 1820625024
-        Y: 400624992
-      - X: 1799374976
-        Y: 400624992
-      - X: 1799374976
-        Y: 389375008
-      - X: 1820625024
-        Y: 389375008
-    - - X: 1930625024
-        Y: 390624992
-      - X: 1919374976
-        Y: 390624992
-      - X: 1919374976
-        Y: 379375008
-      - X: 1930625024
-        Y: 379375008
+  m_ColliderPaths: []
   m_CompositePaths:
-    m_Paths:
-    - - {x: 202.06248, y: 50.9375}
-      - {x: 202.06248, y: 52.0625}
-      - {x: 200.9375, y: 52.06247}
-      - {x: 200.93753, y: 50.9375}
-    - - {x: 203.06248, y: 46.9375}
-      - {x: 203.06248, y: 48.0625}
-      - {x: 201.9375, y: 48.06247}
-      - {x: 201.93753, y: 46.9375}
-    - - {x: 206.06248, y: 43.9375}
-      - {x: 206.06248, y: 45.0625}
-      - {x: 200.9375, y: 45.06247}
-      - {x: 200.93753, y: 43.9375}
-    - - {x: 195.06248, y: 40.9375}
-      - {x: 195.06248, y: 42.0625}
-      - {x: 193.9375, y: 42.06247}
-      - {x: 193.93753, y: 40.9375}
-    - - {x: 213.06248, y: 39.9375}
-      - {x: 213.06248, y: 41.0625}
-      - {x: 209.9375, y: 41.06247}
-      - {x: 209.93753, y: 39.9375}
-    - - {x: 208.06248, y: 39.9375}
-      - {x: 208.06248, y: 41.0625}
-      - {x: 199.9375, y: 41.06247}
-      - {x: 199.93753, y: 39.9375}
-    - - {x: 182.06248, y: 38.9375}
-      - {x: 182.06248, y: 40.0625}
-      - {x: 179.9375, y: 40.06247}
-      - {x: 179.93753, y: 38.9375}
-    - - {x: 193.06248, y: 37.9375}
-      - {x: 193.06248, y: 39.0625}
-      - {x: 191.9375, y: 39.06247}
-      - {x: 191.93753, y: 37.9375}
+    m_Paths: []
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
   m_CompositeGameObject: {fileID: 8556091662100472174}
---- !u!114 &4873810562893504521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8556091662100472174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba66bd615d107ba49a9710e1fc672a6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trap: {fileID: 8556091662100472174}
-  timer: 2
